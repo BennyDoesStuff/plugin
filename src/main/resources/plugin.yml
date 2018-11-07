@@ -1,0 +1,6 @@
+name: MinehutBans
+version: ${project.version}
+main: com.danielgulic.minehutbans.MinehutBans
+authors: [jellz]
+description: Protecting Minehut servers from known cheaters
+website: https://minehutbans.xyz

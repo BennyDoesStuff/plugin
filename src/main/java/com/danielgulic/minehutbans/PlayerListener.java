@@ -29,7 +29,7 @@ public class PlayerListener implements Listener {
             final Date issued = new Date(playerResponse.getLong("createdAt"));
             final DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             final String issuedFormat = df.format(issued);
-            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_BANNED, ChatColor.translateAlternateColorCodes('&', "&7You are on the MinehutBans blacklist!\n\n&cReason: &f" + playerResponse.getString("reason") + "\n&cIssued: &f" + issuedFormat + "\n\n&fLearn more: &b&nhttps://u.jlz.fun/minehutbans"));
+            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_BANNED, ChatColor.translateAlternateColorCodes('&', "&7You are on the MinehutBans blacklist!\n\n&cReason: &f" + playerResponse.getString("reason") + "\n&cIssued: &f" + issuedFormat + "\n\n&fLearn more: &b&nhttps://u.jlz.fun/minehutbans-blacklisted"));
             MinehutBans.get().getLogger().info("Blocked " + event.getName() + " from joining");
         }
     }

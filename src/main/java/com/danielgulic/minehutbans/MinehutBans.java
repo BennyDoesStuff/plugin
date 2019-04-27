@@ -1,6 +1,7 @@
 package com.danielgulic.minehutbans;
 
 import org.bukkit.plugin.java.*;
+import org.bstats.bukkit.Metrics;
 import khttp.*;
 import khttp.responses.*;
 import lombok.Getter;
@@ -15,6 +16,8 @@ public final class MinehutBans extends JavaPlugin {
 
     public void onEnable() {
         instance = this;
+
+        Metrics metrics = new Metrics(this);
 
         saveDefaultConfig();
 
